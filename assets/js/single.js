@@ -76,4 +76,4 @@ var displayWarning = function(repo) {
     limitWarningEl.appendChild(linkEl);
 }; 
 
-getRepoIssues("jenmlucas");
+getRepoIssues("jenmlucas/git-it-done");
