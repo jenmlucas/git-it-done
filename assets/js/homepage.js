@@ -96,7 +96,7 @@ var displayRepos = function (repos, searchTerm) {
     }
 };
 
-var getFeaturedRepos = function (language) {
+var getFeaturedRepos = function(language) {
     var apiUrl = "https://api.github.com/search/repositories?q=" + language + "+is:featured&sort=help-wanted-issues";
 
     fetch(apiUrl).then(function (response) {
@@ -110,17 +110,18 @@ var getFeaturedRepos = function (language) {
             alert("Error: GitHub User Not Found");
         }
     });
-}
+};
 
 var buttonClickHandler = function(event) { 
     var language = event.target.getAttribute("data-language");
     console.log(language);
+
      if (language) {
         getFeaturedRepos(language);
         //clear old content
          repoContainerEl.textContent = "";
      }
-}
+};
 
 userFormEl.addEventListener("submit", formSubmitHandler);
 languageButtonEl.addEventListener("click", buttonClickHandler);
